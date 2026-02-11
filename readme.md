@@ -5,6 +5,13 @@ https://github.com/judahpaul16/gpt-home/tree/main
 ## Setup sound 
 
 ```
+sudo raspi-config
+advanced->audio
+switch to pulseaudio (not pipewire)
+
+```
+
+```
 jharvey@raspberrypi:~/gpt-home $ cat /etc/asound.conf
 pcm.!default { type hw card vc4hdmi0 device 0 }
 ctl.!default { type hw card vc4hdmi0 }
